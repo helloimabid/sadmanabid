@@ -110,7 +110,7 @@ export default function Home() {
                     className="block mb-2"
                     tag="span"
                   />
-                  <span className="text-primary block relative">
+                  <span className="text-secondary block relative">
                     <AnimatedText
                       text={personalInfo.title}
                       tag="span"
