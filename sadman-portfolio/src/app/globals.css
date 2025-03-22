@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%;
+    --foreground: 240 10% 3.9%;
+    --card: 240 10% 97%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 240 10% 97%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 265.4 89.3% 66.3%;
+    --primary-foreground: 220 14.3% 95.9%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 265.4 89.3% 66.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 263.4 80.3% 70.3%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 20.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 20.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 60.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 20.9%;
+    --input: 240 3.7% 20.9%;
+    --ring: 263.4 80.3% 70.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full hover:bg-primary/30 transition-colors;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.2) transparent;
+  }
+}
+
+/* Cyberpunk styling utilities */
+@layer components {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-cyberpunk-gradient animate-text-gradient;
+  }
+
+  .cyberpunk-border {
+    @apply border border-primary/30 shadow-lg;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+  }
+
+  .cyberpunk-glow {
+    @apply relative;
+  }
+
+  .cyberpunk-glow::after {
+    content: "";
+    @apply absolute inset-0 rounded-[inherit] pointer-events-none;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+    @apply animate-glow;
+  }
+
+  .typing-effect::after {
+    content: "|";
+    @apply animate-pulse;
+  }
+
+  .hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
