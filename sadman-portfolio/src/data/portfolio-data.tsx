@@ -5,7 +5,7 @@ import { SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, SiPostgresql, SiEx
 export const personalInfo = {
   name: "Sadman Abid",
   title: "Web Developer",
-  email: "contact@sadmanabid.com",
+  email: "helloimabid@gmail.com",
   location: "Dhaka, Bangladesh",
   bio: "A passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
   longBio: `I'm Sadman Abid, a passionate and dedicated web developer with a strong foundation in creating responsive, user-friendly applications. I specialize in building full-stack web solutions with a focus on performance and scalability.
@@ -14,9 +14,9 @@ My journey in web development began during college, where I developed a fascinat
 
 I pride myself on writing clean, maintainable code and creating intuitive user experiences. My goal is to contribute to innovative projects that make a positive impact on people's lives.`,
   socialLinks: {
-    github: "https://github.com/sadmanabid",
-    linkedin: "https://linkedin.com/in/sadmanabid",
-    twitter: "https://twitter.com/sadmanabid",
+    github: "https://github.com/helloimabid",
+    linkedin: "https://linkedin.com/in/helloimabid",
+    twitter: "https://twitter.com/helloimabid",
   },
   resumeUrl: "/resume.pdf",
 };
@@ -191,50 +191,36 @@ export const projects = [
 ];
 
 export const experiences = [
-  {
-    title: "Senior Frontend Developer",
-    company: "TechSolutions Inc.",
-    location: "Remote",
-    period: "2023 - Present",
-    description: "Leading frontend development for enterprise clients, mentoring junior developers, and implementing modern web technologies.",
-  },
-  {
-    title: "Full Stack Developer",
-    company: "WebCraft Studios",
-    location: "Dhaka, Bangladesh",
-    period: "2021 - 2023",
-    description: "Developed and maintained web applications for various clients, collaborating with design and backend teams to deliver high-quality products.",
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Digital Innovations",
-    location: "Dhaka, Bangladesh",
-    period: "2019 - 2021",
-    description: "Created responsive websites, implemented UI designs, and contributed to backend development using Node.js and Express.",
-  },
-  {
+   {
     title: "Freelance Web Developer",
     company: "Self-employed",
     location: "Remote",
-    period: "2018 - 2019",
+    period: "2024 - oresent",
     description: "Designed and developed websites for small businesses and individuals, focusing on clean code and user-friendly interfaces.",
   },
+  {
+    title: "Full Stack Developer",
+    company: "জিজ্ঞাসা",
+    location: "Remote",
+    period: "2024 - 2025",
+    description: "Developed and maintained web applications for various clients, collaborating with design and backend teams to deliver high-quality products.",
+  }
 ];
 
 export const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Dhaka",
+    degree: "Higher Secondary Certificate(HSC)",
+    institution: "St. Joseph Higher Secondary School",
     location: "Dhaka, Bangladesh",
-    period: "2016 - 2020",
-    description: "Focused on software engineering, web development, and database management. Graduated with honors.",
+    period: "2024 - present",
+    description: "pursuing my higher secondary studies.",
   },
   {
-    degree: "Web Development Bootcamp",
-    institution: "Tech Academy",
-    location: "Online",
-    period: "2018",
-    description: "Intensive 12-week program covering full-stack web development technologies and best practices.",
+    degree: "Secondary School Certificate(SSC)",
+    institution: "Monipur High School and College",
+    location: "Dhaka, Bangladesh",
+    period: "2014 - 2024",
+    description: "Completed my primary and secondary studies.",
   },
 ];
 
