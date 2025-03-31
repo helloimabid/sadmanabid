@@ -1,44 +1,52 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import AnimatedSection from "@/components/ui/animated-section";
+import type React from "react"
+
+import { useState, useRef } from "react"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import AnimatedSection from "@/components/ui/animated-section"
+import emailjs from "@emailjs/browser"
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-  });
+  })
 
-  const [isSending, setIsSending] = useState(false);
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isSending, setIsSending] = useState(false)
+  const [isSent, setIsSent] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSending(true);
-    setError(null);
+    e.preventDefault()
+    setIsSending(true)
+    setError(null)
 
     try {
-      // Simulate form submission with a delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+      )
 
-      // In a real environment, you would send the data to a backend API
-      console.log("Form submitted:", formData);
+      if (result.status !== 200) {
+        throw new Error("Failed to send message")
+      }
 
-      setIsSending(false);
-      setIsSent(true);
+      setIsSending(false)
+      setIsSent(true)
 
       // Reset form
       setFormData({
@@ -46,18 +54,18 @@ export default function ContactForm() {
         email: "",
         subject: "",
         message: "",
-      });
+      })
 
       // Reset success message after 5 seconds
       setTimeout(() => {
-        setIsSent(false);
-      }, 5000);
+        setIsSent(false)
+      }, 5000)
     } catch (err) {
-      setIsSending(false);
-      setError("Something went wrong. Please try again later.");
-      console.error("Error submitting form:", err);
+      setIsSending(false)
+      setError("Something went wrong. Please try again later.")
+      console.error("Error submitting form:", err)
     }
-  };
+  }
 
   // Animation variants
   const formControls = {
@@ -72,23 +80,18 @@ export default function ContactForm() {
         delay: custom * 0.1,
       },
     }),
-  };
+  }
 
   return (
-    <AnimatedSection
-      direction="up"
-      variant="slide"
-      className="w-full max-w-2xl mx-auto"
-    >
+    <AnimatedSection direction="up" variant="slide" className="w-full max-w-2xl mx-auto">
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="space-y-6 bg-card/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-border/40 shadow-lg"
       >
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold">Get In Touch</h3>
-          <p className="text-muted-foreground mt-2">
-            I'm always interested in new projects and opportunities.
-          </p>
+          <p className="text-muted-foreground mt-2">I'm always interested in new projects and opportunities.</p>
         </div>
 
         {error && (
@@ -114,12 +117,7 @@ export default function ContactForm() {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            variants={formControls}
-            initial="initial"
-            animate="animate"
-            custom={0}
-          >
+          <motion.div variants={formControls} initial="initial" animate="animate" custom={0}>
             <label className="block text-sm font-medium mb-2" htmlFor="name">
               Name
             </label>
@@ -134,17 +132,12 @@ export default function ContactForm() {
               className={cn(
                 "w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-primary/20 outline-none",
                 "bg-background/30 backdrop-blur-sm text-foreground",
-                "transition-colors duration-200"
+                "transition-colors duration-200",
               )}
             />
           </motion.div>
 
-          <motion.div
-            variants={formControls}
-            initial="initial"
-            animate="animate"
-            custom={1}
-          >
+          <motion.div variants={formControls} initial="initial" animate="animate" custom={1}>
             <label className="block text-sm font-medium mb-2" htmlFor="email">
               Email
             </label>
@@ -159,18 +152,13 @@ export default function ContactForm() {
               className={cn(
                 "w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-primary/20 outline-none",
                 "bg-background/30 backdrop-blur-sm text-foreground",
-                "transition-colors duration-200"
+                "transition-colors duration-200",
               )}
             />
           </motion.div>
         </div>
 
-        <motion.div
-          variants={formControls}
-          initial="initial"
-          animate="animate"
-          custom={2}
-        >
+        <motion.div variants={formControls} initial="initial" animate="animate" custom={2}>
           <label className="block text-sm font-medium mb-2" htmlFor="subject">
             Subject
           </label>
@@ -185,17 +173,12 @@ export default function ContactForm() {
             className={cn(
               "w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-primary/20 outline-none",
               "bg-background/30 backdrop-blur-sm text-foreground",
-              "transition-colors duration-200"
+              "transition-colors duration-200",
             )}
           />
         </motion.div>
 
-        <motion.div
-          variants={formControls}
-          initial="initial"
-          animate="animate"
-          custom={3}
-        >
+        <motion.div variants={formControls} initial="initial" animate="animate" custom={3}>
           <label className="block text-sm font-medium mb-2" htmlFor="message">
             Message
           </label>
@@ -210,7 +193,7 @@ export default function ContactForm() {
             className={cn(
               "w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-primary/20 outline-none",
               "bg-background/30 backdrop-blur-sm text-foreground",
-              "transition-colors duration-200 resize-none"
+              "transition-colors duration-200 resize-none",
             )}
           />
         </motion.div>
@@ -227,10 +210,12 @@ export default function ContactForm() {
             disabled={isSending || isSent}
             className="w-full sm:w-auto min-w-[200px] relative overflow-hidden group"
           >
-            <span className={cn(
-              "inline-block transition-all duration-200 transform",
-              isSending ? "opacity-0" : "opacity-100"
-            )}>
+            <span
+              className={cn(
+                "inline-block transition-all duration-200 transform",
+                isSending ? "opacity-0" : "opacity-100",
+              )}
+            >
               Send Message
             </span>
 
@@ -245,5 +230,6 @@ export default function ContactForm() {
         </motion.div>
       </form>
     </AnimatedSection>
-  );
+  )
 }
+
