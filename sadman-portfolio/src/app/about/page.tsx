@@ -113,7 +113,7 @@ export default function AboutPage() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection
+{/*               <AnimatedSection
                 direction="up"
                 variant="slide"
               >
@@ -140,7 +140,7 @@ export default function AboutPage() {
                     </AnimatedSection>
                   ))}
                 </div>
-              </AnimatedSection>
+              </AnimatedSection> */}
 
               <AnimatedSection
                 direction="up"
