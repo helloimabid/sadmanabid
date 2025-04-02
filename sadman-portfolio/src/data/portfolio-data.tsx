@@ -137,7 +137,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description: "A full-featured e-commerce platform with product management, shopping cart, and secure payment processing.",
     image: "https://placehold.co/600x400/3178C6/FFFFFF?text=E-Commerce+Platform",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
+    tags: ["React", "Node.js", "Express"],
     demoUrl: "https://ecommerce-demo.example.com",
     githubUrl: "https://github.com/sadmanabid/ecommerce-platform",
     featured: true,
@@ -250,27 +250,27 @@ export const testimonials = [
 
 export const achievements = [
   {
-    title: "Social Business Youth Summit Certificate",
-    organization: "Festival of Youth 2025",
+    title: "Social fiction story telling Certificate",
+    organization: "3ZERO Club",
     date: "February 2025",
-    description: "Recognized for outstanding contributions to the Social Business Youth Summit at Intercontinental Dhaka."
+    description: "Recognized for achieving one of the highest scores in the Social fiction story telling competition."
   },
   {
-    title: "Best Web Development Project",
-    organization: "National Tech Competition",
-    date: "2023",
-    description: "First place award for developing an innovative web application that addresses community needs."
+    title: "Crack the code certificate",
+    organization: "Josephite IT club",
+    date: "2024",
+    description: "First place award for acheiving highest scores in the crack the code contest."
   },
   {
-    title: "Open Source Contributor",
-    organization: "GitHub",
-    date: "2022 - Present",
-    description: "Active contributor to several open-source projects with over 50 accepted pull requests."
+    title: "ICT Olympiad Certificate",
+    organization: "AIUB Computer Club",
+    date: "2024",
+    description: "First place award for acheiving highest scores in the Ict Olympiad."
   },
   {
-    title: "Web Development Certification",
-    organization: "freeCodeCamp",
-    date: "2021",
-    description: "Completed advanced web development curriculum and built several projects demonstrating proficiency."
+    title: "Math Olympiad Certificate",
+    organization: "Hermann Gmeiner Science Club",
+    date: "2024",
+    description: "Second place award in the Math Olympiad"
   },
 ];
