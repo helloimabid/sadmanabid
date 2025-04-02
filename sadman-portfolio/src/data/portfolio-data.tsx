@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { FaReact, FaNodeJs, FaDatabase, FaCode, FaDesktop, FaMobile, FaServer, FaCloud } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, SiPostgresql, SiExpress, SiPrisma, SiDocker } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, SiMysql, SiExpress} from "react-icons/si";
 
 export const personalInfo = {
   name: "Sadman Abid",
