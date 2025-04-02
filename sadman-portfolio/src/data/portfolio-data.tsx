@@ -137,7 +137,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description: "A full-featured e-commerce platform with product management, shopping cart, and secure payment processing.",
     image: "https://placehold.co/600x400/3178C6/FFFFFF?text=E-Commerce+Platform",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    tags: ["React", "Node.js", "MongoDB", "Express"],
     demoUrl: "https://ecommerce-demo.example.com",
     githubUrl: "https://github.com/sadmanabid/ecommerce-platform",
     featured: true,
@@ -147,7 +147,7 @@ export const projects = [
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates, project tracking, and team collaboration features.",
     image: "https://placehold.co/600x400/38B2AC/FFFFFF?text=Task+Management",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Socket.io"],
+    tags: ["Next.js", "TypeScript", "Socket.io"],
     demoUrl: "https://taskmaster.example.com",
     githubUrl: "https://github.com/sadmanabid/task-management",
   },
@@ -174,7 +174,7 @@ export const projects = [
     title: "Blog Platform",
     description: "A content management system with rich text editing, user authentication, and content categorization.",
     image: "https://placehold.co/600x400/47A248/FFFFFF?text=Blog+Platform",
-    tags: ["Next.js", "MongoDB", "NextAuth", "TipTap"],
+    tags: ["Next.js", "NextAuth", "TipTap"],
     demoUrl: "https://blog.example.com",
     githubUrl: "https://github.com/sadmanabid/blog-platform",
     featured: true,
@@ -191,20 +191,20 @@ export const projects = [
 ];
 
 export const experiences = [
-   {
-    title: "Freelance Web Developer",
-    company: "Self-employed",
-    location: "Remote",
-    period: "2024 - oresent",
-    description: "Designed and developed websites for small businesses and individuals, focusing on clean code and user-friendly interfaces.",
-  },
-  {
-    title: "Full Stack Developer",
-    company: "জিজ্ঞাসা",
-    location: "Remote",
-    period: "2024 - 2025",
-    description: "Developed and maintained web applications for various clients, collaborating with design and backend teams to deliver high-quality products.",
-  }
+  //  {
+  //   title: "Freelance Web Developer",
+  //   company: "Self-employed",
+  //   location: "Remote",
+  //   period: "2024 - oresent",
+  //   description: "Designed and developed websites for small businesses and individuals, focusing on clean code and user-friendly interfaces.",
+  // },
+  // {
+  //   title: "Full Stack Developer",
+  //   company: "জিজ্ঞাসা",
+  //   location: "Remote",
+  //   period: "2024 - 2025",
+  //   description: "Developed and maintained web applications for various clients, collaborating with design and backend teams to deliver high-quality products.",
+  // }
 ];
 
 export const education = [
