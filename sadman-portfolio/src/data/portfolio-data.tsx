@@ -80,26 +80,12 @@ export const skills: Skill[] = [
     description: "Working with NoSQL databases for flexible data storage",
   },
   {
-    name: "PostgreSQL",
-    icon: <SiPostgresql />,
+    name: "MySQL",
+    icon: <SiMysql />,
     color: "#336791",
     level: 3,
     description: "Managing relational databases for structured data",
-  },
-  {
-    name: "Prisma",
-    icon: <SiPrisma />,
-    color: "#2D3748",
-    level: 3,
-    description: "Type-safe database access with modern ORM",
-  },
-  {
-    name: "Docker",
-    icon: <SiDocker />,
-    color: "#2496ED",
-    level: 2,
-    description: "Containerizing applications for consistent deployment",
-  },
+  }
 ];
 
 interface Service {
