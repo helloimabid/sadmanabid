@@ -37,13 +37,12 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-  },
-  // Add asset prefix for production builds
-  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
+  }, // Asset prefix must start with a leading slash or be an absolute URL for next/font to work
+  assetPrefix: process.env.NODE_ENV === "production" ? "/" : "",
   // Ensure trailing slashes are handled correctly
   trailingSlash: true,
   // Add this to handle output correctly for static hosting
-  output: 'export',
+  output: "export",
 };
 
 export default nextConfig;
