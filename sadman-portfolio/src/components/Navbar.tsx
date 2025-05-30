@@ -5,7 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -44,9 +51,7 @@ export default function Navbar() {
     <motion.header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "py-2 backdrop-blur-lg"
-          : "py-4 bg-transparent"
+        isScrolled ? "py-2 backdrop-blur-lg" : "py-4 bg-transparent"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -95,12 +100,12 @@ export default function Navbar() {
                 className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/0 via-primary to-primary/0"
                 animate={{
                   scaleX: [0.3, 1, 0.3],
-                  x: ["-20%", "0%", "20%"]
+                  x: ["-20%", "0%", "20%"],
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
-                  repeatType: "reverse"
+                  repeatType: "reverse",
                 }}
               />
             </motion.div>
@@ -128,7 +133,7 @@ export default function Navbar() {
                       transition={{
                         type: "spring",
                         stiffness: 400,
-                        damping: 25
+                        damping: 25,
                       }}
                     />
                   )}
@@ -153,16 +158,26 @@ export default function Navbar() {
                     className="absolute inset-0 rounded-md"
                     animate={{
                       boxShadow: isDark
-                        ? ['0 0 0px #a855f7', '0 0 10px #a855f740', '0 0 0px #a855f7']
-                        : ['0 0 0px #7c3aed', '0 0 10px #7c3aed40', '0 0 0px #7c3aed']
+                        ? [
+                            "0 0 0px #a855f7",
+                            "0 0 10px #a855f740",
+                            "0 0 0px #a855f7",
+                          ]
+                        : [
+                            "0 0 0px #7c3aed",
+                            "0 0 10px #7c3aed40",
+                            "0 0 0px #7c3aed",
+                          ],
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
-              </SheetTrigger>
-
-              <SheetContent side="right" className="w-[80%] sm:w-[350px] p-0 border-l-primary/20 bg-background/95 backdrop-blur-xl">
+              </SheetTrigger>{" "}
+              <SheetContent
+                side="right"
+                className="w-[80%] sm:w-[350px] p-0 border-l-primary/20 bg-background/95 backdrop-blur-xl"
+              >
                 <div className="flex flex-col h-full px-6 py-12">
                   {/* <Button
                     variant="ghost"
@@ -174,12 +189,15 @@ export default function Navbar() {
                     <span className="sr-only">Close menu</span>
                   </Button> */}
 
-                  <div className="px-4 mb-8">
-                    <h2 className="flex items-center gap-2 font-mono text-2xl font-bold">
+                  <SheetHeader className="p-0 mb-8 text-left">
+                    <SheetTitle className="flex items-center gap-2 font-mono text-2xl font-bold">
                       <span className="text-primary">~/</span>menu
-                    </h2>
+                    </SheetTitle>
+                    <SheetDescription className="sr-only">
+                      Navigation menu for mobile devices
+                    </SheetDescription>
                     <div className="mt-2 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-                  </div>
+                  </SheetHeader>
 
                   <nav className="flex flex-col gap-4 mt-4">
                     <AnimatePresence>
@@ -202,7 +220,9 @@ export default function Navbar() {
                             )}
                           >
                             <div className="flex items-center">
-                              <span className="mr-3 font-mono text-sm text-primary/60">0{index + 1}</span>
+                              <span className="mr-3 font-mono text-sm text-primary/60">
+                                0{index + 1}
+                              </span>
                               {item.name}
                             </div>
                           </Link>
@@ -215,7 +235,8 @@ export default function Navbar() {
                     <div className="px-4 py-2 border rounded-md bg-muted/30 border-border/20">
                       <div className="flex items-center justify-between">
                         <p className="text-xs text-muted-foreground">
-                          <span className="font-mono text-primary">sys</span> / theme
+                          <span className="font-mono text-primary">sys</span> /
+                          theme
                         </p>
                         <ThemeToggle />
                       </div>
