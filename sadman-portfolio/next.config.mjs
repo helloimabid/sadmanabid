@@ -1,21 +1,36 @@
-// Comment out Cloudflare-specific code for Azure deployment
-// import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // For Azure Static Web Apps static export
-  output: "export",
-  trailingSlash: true,
-  distDir: "out",
-
-  // Optimize images for static export
+  /* config options here */
   images: {
     unoptimized: true,
-  },
-
-  // For proper path resolution
-  webpack: (config) => {
-    return config;
+    domains: [
+      "source.unsplash.com",
+      "images.unsplash.com",
+      "ext.same-assets.com",
+      "ugc.same-assets.com",
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ext.same-assets.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ugc.same-assets.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
