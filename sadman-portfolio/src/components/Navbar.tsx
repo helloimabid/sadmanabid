@@ -63,27 +63,27 @@ export default function Navbar() {
         layoutId="navbar-border"
       />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+      <div className="relative px-6 mx-auto max-w-7xl md:px-12">
         <div className="flex items-center justify-between">
           <Link href="/">
             <motion.div
-              className="flex items-center text-2xl font-bold relative"
+              className="relative flex items-center text-2xl font-bold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-foreground font-mono">Sadman</span>
-              <span className="text-primary font-mono">Abid</span>
+              <span className="font-mono text-foreground">Sadman</span>
+              <span className="font-mono text-primary">Abid</span>
 
               {/* Futuristic bracket decoration */}
               <motion.span
-                className="absolute -left-4 top-0 text-primary/60 font-light"
+                className="absolute top-0 font-light -left-4 text-primary/60"
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 {`<`}
               </motion.span>
               <motion.span
-                className="absolute -right-4 top-0 text-primary/60 font-light"
+                className="absolute top-0 font-light -right-4 text-primary/60"
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               >
@@ -107,7 +107,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="items-center hidden gap-6 md:flex">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
                 <motion.div
@@ -148,7 +148,7 @@ export default function Navbar() {
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="relative">
-                  <Menu className="h-5 w-5" />
+                  <Menu className="w-5 h-5" />
                   <motion.span
                     className="absolute inset-0 rounded-md"
                     animate={{
@@ -163,19 +163,19 @@ export default function Navbar() {
               </SheetTrigger>
 
               <SheetContent side="right" className="w-[80%] sm:w-[350px] p-0 border-l-primary/20 bg-background/95 backdrop-blur-xl">
-                <div className="flex flex-col h-full py-12 px-6">
-                  <Button
+                <div className="flex flex-col h-full px-6 py-12">
+                  {/* <Button
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="absolute top-4 right-4"
                   >
-                    <X className="h-5 w-5" />
+                    <X className="w-5 h-5" />
                     <span className="sr-only">Close menu</span>
-                  </Button>
+                  </Button> */}
 
-                  <div className="mb-8 px-4">
-                    <h2 className="text-2xl font-mono font-bold flex items-center gap-2">
+                  <div className="px-4 mb-8">
+                    <h2 className="flex items-center gap-2 font-mono text-2xl font-bold">
                       <span className="text-primary">~/</span>menu
                     </h2>
                     <div className="mt-2 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -202,7 +202,7 @@ export default function Navbar() {
                             )}
                           >
                             <div className="flex items-center">
-                              <span className="text-primary/60 mr-3 font-mono text-sm">0{index + 1}</span>
+                              <span className="mr-3 font-mono text-sm text-primary/60">0{index + 1}</span>
                               {item.name}
                             </div>
                           </Link>
@@ -212,10 +212,10 @@ export default function Navbar() {
                   </nav>
 
                   <div className="mt-auto">
-                    <div className="px-4 py-2 rounded-md bg-muted/30 border border-border/20">
+                    <div className="px-4 py-2 border rounded-md bg-muted/30 border-border/20">
                       <div className="flex items-center justify-between">
                         <p className="text-xs text-muted-foreground">
-                          <span className="text-primary font-mono">sys</span> / theme
+                          <span className="font-mono text-primary">sys</span> / theme
                         </p>
                         <ThemeToggle />
                       </div>

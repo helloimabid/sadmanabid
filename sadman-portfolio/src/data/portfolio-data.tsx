@@ -1,18 +1,39 @@
 import { ReactNode } from "react";
-import { FaReact, FaNodeJs, FaDatabase, FaCode, FaDesktop, FaMobile, FaServer, FaCloud } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, SiMysql, SiExpress} from "react-icons/si";
-
+import {
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaCode,
+  FaDesktop,
+  FaMobile,
+  FaServer,
+  FaCloud,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiMongodb,
+  SiMysql,
+  SiExpress,
+} from "react-icons/si";
+// export const runtime = "edge";
 export const personalInfo = {
   name: "Sadman Abid",
-  title: "Web Developer",
+  title: [
+    "Full Stack Developer",
+    "Graphics Designer",
+    "UI/UX Enthusiast",
+    "DevOps Engineer",
+  ],
   email: "helloimabid@gmail.com",
   location: "Dhaka, Bangladesh",
   bio: "A passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
   longBio: `I'm Sadman Abid, a passionate and dedicated web developer with a strong foundation in creating responsive, user-friendly applications. I specialize in building full-stack web solutions with a focus on performance and scalability.
 
-My journey in web development began during college, where I developed a fascination for transforming design concepts into functional websites. Since then, I've been continuously expanding my skills and keeping up with the latest industry trends.
+My journey in web development began during school, where I developed a fascination for transforming design concepts into functional websites. Since then, I've been continuously expanding my skills and keeping up with the latest industry trends.
 
-I pride myself on writing clean, maintainable code and creating intuitive user experiences. My goal is to contribute to innovative projects that make a positive impact on people's lives.`,
+I pride myself on writing clean, maintainable code and creating intuitive user experiences.`,
   socialLinks: {
     github: "https://github.com/helloimabid",
     linkedin: "https://linkedin.com/in/helloimabid",
@@ -35,28 +56,32 @@ export const skills: Skill[] = [
     icon: <FaReact />,
     color: "#61DAFB",
     level: 5,
-    description: "Building modern, responsive user interfaces with React and its ecosystem",
+    description:
+      "Building modern, responsive user interfaces with React and its ecosystem",
   },
   {
     name: "Next.js",
     icon: <SiNextdotjs />,
     color: "#000000",
     level: 4,
-    description: "Creating performant web applications with Next.js for server-side rendering and static site generation",
+    description:
+      "Creating performant web applications with Next.js for server-side rendering and static site generation",
   },
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss />,
     color: "#38B2AC",
     level: 5,
-    description: "Crafting beautiful interfaces with utility-first CSS framework",
+    description:
+      "Crafting beautiful interfaces with utility-first CSS framework",
   },
   {
     name: "TypeScript",
     icon: <SiTypescript />,
     color: "#3178C6",
     level: 4,
-    description: "Developing type-safe applications with enhanced developer experience",
+    description:
+      "Developing type-safe applications with enhanced developer experience",
   },
   {
     name: "Node.js",
@@ -85,7 +110,7 @@ export const skills: Skill[] = [
     color: "#336791",
     level: 3,
     description: "Managing relational databases for structured data",
-  }
+  },
 ];
 
 interface Service {
@@ -97,22 +122,26 @@ interface Service {
 export const services: Service[] = [
   {
     title: "Frontend Development",
-    description: "Building modern, responsive, and accessible user interfaces with React, Next.js, and other cutting-edge technologies.",
+    description:
+      "Building modern, responsive, and accessible user interfaces with React, Next.js, and other cutting-edge technologies.",
     icon: <FaDesktop />,
   },
   {
     title: "Backend Development",
-    description: "Creating robust server-side applications, RESTful APIs, and database integrations using Node.js, Express, and more.",
+    description:
+      "Creating robust server-side applications, RESTful APIs, and database integrations using Node.js, Express, and more.",
     icon: <FaServer />,
   },
   {
     title: "Full Stack Development",
-    description: "End-to-end development from database design to user interface, ensuring cohesive and scalable applications.",
+    description:
+      "End-to-end development from database design to user interface, ensuring cohesive and scalable applications.",
     icon: <FaCode />,
   },
   {
     title: "Database Design",
-    description: "Designing efficient database schemas, optimizing queries, and implementing data models for various applications.",
+    description:
+      "Designing efficient database schemas, optimizing queries, and implementing data models for various applications.",
     icon: <FaDatabase />,
   },
 ];
@@ -120,77 +149,65 @@ export const services: Service[] = [
 export const projects = [
   {
     id: "1",
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with product management, shopping cart, and secure payment processing.",
-    image: "https://placehold.co/600x400/3178C6/FFFFFF?text=E-Commerce+Platform",
-    tags: ["React", "Node.js", "Express"],
-    demoUrl: "https://ecommerce-demo.example.com",
-    githubUrl: "https://github.com/sadmanabid/ecommerce-platform",
+    title: "Portfolio Website",
+    description:
+      "A modern, animated portfolio website showcasing projects and skills with interactive elements.",
+    image: "https://i.ibb.co.com/Wpz5T6MZ/porfolio-SS.png",
+    tags: ["React", "Framer Motion", "Tailwind CSS", "Next.js"],
+    demoUrl: "https://helloimabid.me",
+    githubUrl: "https://github.com/helloimabid/portfolio-V1.0",
     featured: true,
   },
   {
     id: "2",
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, project tracking, and team collaboration features.",
-    image: "https://placehold.co/600x400/38B2AC/FFFFFF?text=Task+Management",
-    tags: ["Next.js", "TypeScript", "Socket.io"],
-    demoUrl: "https://taskmaster.example.com",
-    githubUrl: "https://github.com/sadmanabid/task-management",
-  },
-  {
-    id: "3",
-    title: "Portfolio Website",
-    description: "A modern, animated portfolio website showcasing projects and skills with interactive elements.",
-    image: "https://placehold.co/600x400/61DAFB/000000?text=Portfolio+Website",
-    tags: ["React", "Framer Motion", "Tailwind CSS", "Next.js"],
-    demoUrl: "https://sadmanabid.com",
-    githubUrl: "https://github.com/sadmanabid/portfolio",
-  },
-  {
-    id: "4",
-    title: "Weather Dashboard",
-    description: "A weather application providing real-time forecasts, historical data, and location-based weather updates.",
-    image: "https://placehold.co/600x400/339933/FFFFFF?text=Weather+App",
-    tags: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
-    demoUrl: "https://weather.example.com",
-    githubUrl: "https://github.com/sadmanabid/weather-dashboard",
-  },
-  {
-    id: "5",
-    title: "Blog Platform",
-    description: "A content management system with rich text editing, user authentication, and content categorization.",
-    image: "https://placehold.co/600x400/47A248/FFFFFF?text=Blog+Platform",
-    tags: ["Next.js", "NextAuth", "TipTap"],
-    demoUrl: "https://blog.example.com",
-    githubUrl: "https://github.com/sadmanabid/blog-platform",
+    title: "cyborg-marketplace-dimension",
+    description:
+      "A futuristic e-commerce platform specializing in advanced cyborg enhancements.",
+    image: "https://i.ibb.co.com/pvFd7PJQ/cyborgss.png",
+    tags: ["React", "Shadcn UI ", "Tailwind CSS"],
+    demoUrl: "https://cyborg-marketplace-dimension.vercel.app/",
+    githubUrl: "https://github.com/helloimabid/cyborg-marketplace-dimension",
     featured: true,
   },
   {
-    id: "6",
-    title: "Social Media Dashboard",
-    description: "A unified dashboard for managing multiple social media accounts with analytics and scheduling features.",
-    image: "https://placehold.co/600x400/336791/FFFFFF?text=Social+Media+Dashboard",
-    tags: ["React", "Redux", "Node.js", "Social APIs"],
-    demoUrl: "https://socialdash.example.com",
-    githubUrl: "https://github.com/sadmanabid/social-dashboard",
+    id: "3",
+    title: "PrayerPro",
+    description:
+      "A simple and elegant web application that provides daily prayer times and a Qibla finder using geolocation and device sensors. 🌙🕌",
+    image: "https://i.ibb.co.com/NgxMbcW7/image.png",
+    tags: [
+      "Html",
+      "Css",
+      "Javascript",
+      "Geolocation API",
+      "Aladhan API",
+      "Device Orientation API",
+    ],
+    demoUrl: "https://helloimabid.github.io/PrayerPro/",
+    githubUrl: "https://github.com/helloimabid/PrayerPro",
+    featured: false,
   },
-];
-
-export const experiences = [
-  //  {
-  //   title: "Freelance Web Developer",
-  //   company: "Self-employed",
-  //   location: "Remote",
-  //   period: "2024 - oresent",
-  //   description: "Designed and developed websites for small businesses and individuals, focusing on clean code and user-friendly interfaces.",
-  // },
-  // {
-  //   title: "Full Stack Developer",
-  //   company: "জিজ্ঞাসা",
-  //   location: "Remote",
-  //   period: "2024 - 2025",
-  //   description: "Developed and maintained web applications for various clients, collaborating with design and backend teams to deliver high-quality products.",
-  // }
+  {
+    id: "4",
+    title: "Currency Converter",
+    description:
+      "A web-based currency converter application that uses the ExchangeRate-API to fetch real-time exchange rates.",
+    image: "https://i.ibb.co.com/P8nMrm0/image.png",
+    tags: ["Html", "Css", "Javascript", "ExchangeRate-API"],
+    demoUrl: "https://helloimabid.github.io/currency_converter/",
+    githubUrl: "https://github.com/helloimabid/currency_converter",
+    featured: false,
+  },
+  {
+    id: "5",
+    title: "Bubble Game",
+    description: "A web-based fun and engaging bubble popping game ",
+    image: "https://i.ibb.co.com/8hwmsrK/image.png",
+    tags: ["Html", "Css", "Javascript"],
+    demoUrl: "https://helloimabid.github.io/bubble_game/",
+    githubUrl: "https://github.com/helloimabid/bubble_game",
+    featured: false,
+  },
 ];
 
 export const education = [
@@ -210,53 +227,39 @@ export const education = [
   },
 ];
 
-export const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "Project Manager",
-    company: "TechSolutions Inc.",
-    quote: "Sadman is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are impressive.",
-    image: "https://placehold.co/100x100/38B2AC/FFFFFF?text=SJ",
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    company: "WebCraft Studios",
-    quote: "Working with Sadman has been a pleasure. He's proactive, communicates effectively, and has a talent for turning complex requirements into elegant solutions.",
-    image: "https://placehold.co/100x100/61DAFB/000000?text=MC",
-  },
-  {
-    name: "Emma Rodriguez",
-    role: "UI/UX Designer",
-    company: "Digital Innovations",
-    quote: "Sadman has an incredible ability to transform designs into perfect code. His understanding of both design principles and technical implementation is rare and valuable.",
-    image: "https://placehold.co/100x100/339933/FFFFFF?text=ER",
-  },
-];
-
 export const achievements = [
   {
-    title: "Social fiction story telling Certificate",
+    title: "Web development competition",
+    organization: "Notre Dame Information Technology Club",
+    date: "May 2025",
+    description:
+      "Third place award for designing a futuristic cyborg marketplace web application.",
+  },
+  {
+    title: "Social fiction story telling competition",
     organization: "3ZERO Club",
     date: "February 2025",
-    description: "Recognized for achieving one of the highest scores in the Social fiction story telling competition."
+    description:
+      "Recognized for achieving one of the highest scores in the Social fiction story telling competition.",
   },
   {
-    title: "Crack the code certificate",
+    title: "Crack the code competition",
     organization: "Josephite IT club",
     date: "2024",
-    description: "First place award for acheiving highest scores in the crack the code contest."
+    description:
+      "First place award for acheiving highest scores in the crack the code contest.",
   },
   {
-    title: "ICT Olympiad Certificate",
+    title: "ICT Olympiad competition",
     organization: "AIUB Computer Club",
     date: "2024",
-    description: "First place award for acheiving highest scores in the Ict Olympiad."
+    description:
+      "First place award for acheiving highest scores in the Ict Olympiad.",
   },
   {
-    title: "Math Olympiad Certificate",
+    title: "Math Olympiad competition",
     organization: "Hermann Gmeiner Science Club",
     date: "2024",
-    description: "Second place award in the Math Olympiad"
+    description: "Second place award in the Math Olympiad",
   },
 ];
