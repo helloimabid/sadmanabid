@@ -8,6 +8,7 @@ const nextConfig = {
       "images.unsplash.com",
       "ext.same-assets.com",
       "ugc.same-assets.com",
+      "i.ibb.co",
     ],
     remotePatterns: [
       {
@@ -30,8 +31,19 @@ const nextConfig = {
         hostname: "ugc.same-assets.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+        pathname: "/**",
+      },
     ],
   },
+  // Add asset prefix for production builds
+  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
+  // Ensure trailing slashes are handled correctly
+  trailingSlash: true,
+  // Add this to handle output correctly for static hosting
+  output: 'export',
 };
 
 export default nextConfig;
