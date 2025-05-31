@@ -9,22 +9,22 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: <FaGithub className="h-5 w-5" />,
-    url: "https://github.com/",
+    url: "https://github.com/helloimabid",
   },
   {
     name: "LinkedIn",
     icon: <FaLinkedin className="h-5 w-5" />,
-    url: "https://linkedin.com/in/",
+    url: "https://linkedin.com/in/helloimabid",
   },
   {
     name: "Twitter",
     icon: <FaTwitter className="h-5 w-5" />,
-    url: "https://twitter.com/",
+    url: "https://twitter.com/helloimabid",
   },
   {
     name: "Email",
     icon: <FaEnvelope className="h-5 w-5" />,
-    url: "mailto:contact@sadmanabid.com",
+    url: "mailto:helloimabid@gmail.com",
   },
 ];
 
