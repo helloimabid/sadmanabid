@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove output: "standalone" for Vercel - it's not needed
+  /* config options here */
   images: {
+    unoptimized: true,
     domains: [
       "source.unsplash.com",
       "images.unsplash.com",
-      "i.ibb.co", // Fixed domain without extra .com
+      "ext.same-assets.com",
+      "ugc.same-assets.com",
     ],
     remotePatterns: [
       {
@@ -20,7 +22,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "i.ibb.co", // Fixed domain
+        hostname: "ext.same-assets.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ugc.same-assets.com",
         pathname: "/**",
       },
     ],
