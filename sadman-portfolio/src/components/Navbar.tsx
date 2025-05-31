@@ -88,7 +88,7 @@ export default function Navbar() {
                 {`<`}
               </motion.span>
               <motion.span
-                className="absolute top-0 font-light -right-4 text-primary/60"
+                className="absolute top-0 font-light -right-4.5 text-primary/60"
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               >
