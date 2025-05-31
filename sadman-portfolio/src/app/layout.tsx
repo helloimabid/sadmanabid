@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +24,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground dark:bg-zinc-900 dark:text-zinc-50`}>
         <ThemeProvider>
@@ -35,6 +38,7 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow pt-16">{children}</main>
+            <Analytics />
             <Footer />
           </div>
         </ThemeProvider>
