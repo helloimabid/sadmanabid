@@ -208,6 +208,23 @@ export const projects = [
     githubUrl: "https://github.com/helloimabid/bubble_game",
     featured: false,
   },
+  {
+    id: "6",
+    title: "OpenLearn",
+    description:
+      "a smart education platform where students can learn Physics, Chemistry, Math, Biology, and English Speaking with the help of AI-powered teachers and interactive tools like digital labs",
+    image: "https://i.ibb.co.com/NgxMbcW7/image.png",
+    tags: [
+      "TailwindCss",
+      "Javascript",
+      "Gemini API",
+      "WebSocket",
+      "React",
+    ],
+    demoUrl: "https://openlearn.pages.dev",
+    githubUrl: "https://github.com/arnabdatta13/OpenLearn",
+    featured: false,
+  },
 ];
 
 export const education = [
