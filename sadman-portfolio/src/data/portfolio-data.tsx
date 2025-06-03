@@ -24,7 +24,7 @@ export const personalInfo = {
     "Full Stack Developer",
     "Graphics Designer",
     "UI/UX Enthusiast",
-    "DevOps Engineer",
+    "DevOps",
   ],
   email: "helloimabid@gmail.com",
   location: "Dhaka, Bangladesh",
