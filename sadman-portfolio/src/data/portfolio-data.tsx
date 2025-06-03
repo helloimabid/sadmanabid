@@ -215,7 +215,7 @@ export const projects = [
       "a smart education platform where students can learn Physics, Chemistry, Math, Biology, and English Speaking with the help of AI-powered teachers and interactive tools like digital labs",
     image: "https://i.ibb.co/tnw98Cd/IMG-0933.jpg",
     tags: [
-      "TailwindCss",
+      "Tailwind CSS",
       "Javascript",
       "Gemini API",
       "WebSocket",
