@@ -213,7 +213,7 @@ export const projects = [
     title: "OpenLearn",
     description:
       "a smart education platform where students can learn Physics, Chemistry, Math, Biology, and English Speaking with the help of AI-powered teachers and interactive tools like digital labs",
-    image: "https://i.ibb.co.com/NgxMbcW7/image.png",
+    image: "https://i.ibb.co/tnw98Cd/IMG-0933.jpg",
     tags: [
       "TailwindCss",
       "Javascript",
