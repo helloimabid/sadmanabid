@@ -1,6 +1,6 @@
 # Sadman Portfolio
 
-Welcome to the **Sadman Portfolio** project! This is a personal portfolio website designed to showcase skills, projects, experience, and contact information in an elegant and interactive way.
+Welcome to the **Sadman Portfolio** Repository! This is a personal portfolio website designed to showcase skills, projects, experience, and contact information in an elegant and interactive way.
 
 ## Table of Contents
 
