@@ -156,7 +156,7 @@ export const projects = [
     tags: ["React", "Framer Motion", "Tailwind CSS", "Next.js"],
     demoUrl: "https://helloimabid.me",
     githubUrl: "https://github.com/helloimabid/portfolio-V1.0",
-    featured: true,
+    featured: false,
   },
   {
     id: "2",
@@ -223,7 +223,7 @@ export const projects = [
     ],
     demoUrl: "https://openlearn.pages.dev",
     githubUrl: "https://github.com/arnabdatta13/OpenLearn",
-    featured: false,
+    featured: true,
   },
 ];
 
