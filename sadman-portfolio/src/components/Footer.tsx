@@ -3,9 +3,16 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import { useTheme } from "@/context/ThemeContext";
 
 const socialLinks = [
+  
+  {
+    name: "FaceBook",
+    icon: <FaFacebookSquare className="h-5 w-5" />,
+    url: "https://facebook.com/helloimabid",
+  },
   {
     name: "GitHub",
     icon: <FaGithub className="h-5 w-5" />,
