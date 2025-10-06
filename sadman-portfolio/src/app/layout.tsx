@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sadman Abid | Web Developer",
+  title: "Sadman Abid | Cyber Security Enthusiast | Data Analytics Enthusiast | Aspiring Web Developer",
   description:
     "Personal portfolio of Sadman Abid, a passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
   icons: {
