@@ -21,21 +21,17 @@ import {
 export const personalInfo = {
   name: "Sadman Abid",
   title: [
+    "Aspiring Cybersecurity Professional",
+    "Data Analysis Enthusiast",
     "Full Stack Developer",
     "Graphics Designer",
-    "UI/UX Enthusiast",
-    "DevOps",
   ],
   email: "myself@sadmanabid.me",
   location: "Dhaka, Bangladesh",
-  bio: "A passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
-  longBio: `I'm Sadman Abid, a passionate and dedicated web developer with a strong foundation in creating responsive, user-friendly applications. I specialize in building full-stack web solutions with a focus on performance and scalability.
+  bio: "A passionate tech-savvy from Bangladesh — previously focused on web development, now venturing into cybersecurity and data analytics to understand, secure, and optimize digital systems.",
+  longBio: `I'm Sadman Abid, a tech enthusiast who started my journey as a passionate web developer, creating responsive and user-friendly web applications. Over time, my curiosity about how systems work under the hood and how business efficiency can be increased by processing data interested me in studying cybersecurity as well as data analytics.
 
-My journey in web development began during school, where I developed a fascination for transforming design concepts into functional websites. Since then, I've been continuously expanding my skills and keeping up with the latest industry trends.
-
-I pride myself on writing clean, maintainable code and creating intuitive user experiences.
-
-Currently I'm more invested myself into CyberSecurity for understanding the behind the scene of a computer systems to find out and exploit vulnerabilities and also in Data Analysis for apply my technical knowledge to gain maximum profit and productivity.`,
+My background in web development gave me a solid understanding of how digital platforms work but I was ready to transition from building them to securing and optimizing them. Nowadays, I focus on uncovering vulnerabilities, understanding the internal mechanics of computer systems, and using data analysis to derive insights that identify problems, improve efficiency, and recommend solutions of businesses.`,
   socialLinks: {
     github: "https://github.com/helloimabid",
     linkedin: "https://linkedin.com/in/helloimabid",
