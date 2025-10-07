@@ -26,14 +26,16 @@ export const personalInfo = {
     "UI/UX Enthusiast",
     "DevOps",
   ],
-  email: "helloimabid@gmail.com",
+  email: "myself@sadmanabid.me",
   location: "Dhaka, Bangladesh",
   bio: "A passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
   longBio: `I'm Sadman Abid, a passionate and dedicated web developer with a strong foundation in creating responsive, user-friendly applications. I specialize in building full-stack web solutions with a focus on performance and scalability.
 
 My journey in web development began during school, where I developed a fascination for transforming design concepts into functional websites. Since then, I've been continuously expanding my skills and keeping up with the latest industry trends.
 
-I pride myself on writing clean, maintainable code and creating intuitive user experiences.`,
+I pride myself on writing clean, maintainable code and creating intuitive user experiences.
+
+Currently I'm more invested myself into CyberSecurity for understanding the behind the scene of a computer systems to find out and exploit vulnerabilities and also in Data Analysis for apply my technical knowledge to gain maximum profit and productivity.`,
   socialLinks: {
     github: "https://github.com/helloimabid",
     linkedin: "https://linkedin.com/in/helloimabid",
