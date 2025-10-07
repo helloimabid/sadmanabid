@@ -31,7 +31,7 @@ const socialLinks = [
   {
     name: "Email",
     icon: <FaEnvelope className="h-5 w-5" />,
-    url: "mailto:helloimabid@gmail.com",
+    url: "mailto:myself@sadmanabid.me",
   },
 ];
 
