@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import {head} from "next/head";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/Navbar";
@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sadman Abid | Cyber Security Enthusiast | Data Analytics Enthusiast | Aspiring Web Developer",
   description:
-    "Personal portfolio of Sadman Abid, a passionate Web Developer from Bangladesh, building user-friendly scalable websites for the best user experience.",
+    "Personal portfolio of Sadman Abid, a tech savvy from Bangladesh previously building user friendly web applications, now exploring cybersecurity and data analytics",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -25,26 +25,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    
     <html lang="en" className="scroll-smooth">
-      <head>
-      
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ED5WWLD84"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0ED5WWLD84');
-</script>
-      </head>
-      <body className={`${inter.className} bg-background text-foreground dark:bg-zinc-900 dark:text-zinc-50`}>
+      <head />
+      <body
+        className={`${inter.className} bg-background text-foreground dark:bg-zinc-900 dark:text-zinc-50`}
+      >
         <ThemeProvider>
           <Loader />
           <div className="flex flex-col min-h-screen">
@@ -53,6 +43,20 @@ export default function RootLayout({
             <Analytics />
             <Footer />
           </div>
+
+          {/* ✅ Google Analytics (App Router way) */}
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-0ED5WWLD84"
+          />
+          <Script id="google-analytics">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-0ED5WWLD84');
+            `}
+          </Script>
         </ThemeProvider>
       </body>
     </html>
