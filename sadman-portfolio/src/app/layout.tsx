@@ -32,6 +32,17 @@ export default function RootLayout({
   return (
     
     <html lang="en" className="scroll-smooth">
+      <head>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ED5WWLD84"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0ED5WWLD84');
+</script>
+      </head>
       <body className={`${inter.className} bg-background text-foreground dark:bg-zinc-900 dark:text-zinc-50`}>
         <ThemeProvider>
           <Loader />
