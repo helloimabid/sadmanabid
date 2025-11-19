@@ -26,7 +26,7 @@ export const personalInfo = {
     "Full Stack Developer",
     "Graphics Designer",
   ],
-  email: "myself@sadmanabid.me",
+  email: "me@sadmanabid.me",
   location: "Dhaka, Bangladesh",
   bio: "A passionate tech-savvy from Bangladesh previously focused on web development, now venturing into cybersecurity and data analytics to understand, secure, and optimize digital systems.",
   longBio: `I'm Sadman Abid, a tech enthusiast who started my journey as a passionate web developer, creating responsive and user-friendly web applications. Over time, my curiosity about how systems work under the hood and how business efficiency can be increased by processing data interested me in studying cybersecurity as well as data analytics.
