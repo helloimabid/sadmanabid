@@ -56,7 +56,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="mt-6">
+                  {/* <div className="mt-6">
                     <MotionButton
                       href={personalInfo.resumeUrl}
                       variant="outline"
@@ -66,7 +66,7 @@ export default function AboutPage() {
                       <FaDownload className="mr-2" />
                       Download Resume
                     </MotionButton>
-                  </div>
+                  </div> */}
                 </div>
               </AnimatedSection>
             </div>
