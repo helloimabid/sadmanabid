@@ -247,9 +247,9 @@ This project is private and proprietary.
 ## 👨‍💻 Author
 
 **Your Name**
-- Portfolio: [your-portfolio-url]
-- GitHub: [@your-username]
-- Email: your-email@example.com
+- Portfolio: https://sadmanabid.vercel.app 
+- GitHub: @helloimabid
+- Email: me@sadmanabid.me
 
 ## 🙏 Acknowledgments
 
