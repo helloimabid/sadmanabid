@@ -69,10 +69,45 @@ export default function PortfolioList() {
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const titleRefs = useRef<(HTMLHeadingElement | null)[]>([]);
   const { t } = useLanguage();
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
 
   useEffect(() => {
-    setIsTouchDevice("ontouchstart" in window);
+    const checkDevice = () => {
+      const isTouchOrMobile = "ontouchstart" in window || window.innerWidth < 1024;
+      setIsTouchDevice(isTouchOrMobile);
+      setIsAutoPlaying(isTouchOrMobile);
+    };
+    
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    return () => window.removeEventListener('resize', checkDevice);
   }, []);
+
+  // Auto-play hover effects on mobile/tablet
+  useEffect(() => {
+    if (!isAutoPlaying) {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+      return;
+    }
+
+    let currentIndex = 0;
+    
+    autoPlayRef.current = setInterval(() => {
+      setHoveredIndex(currentIndex);
+      scrambleText(currentIndex);
+      
+      currentIndex = (currentIndex + 1) % projects.length;
+    }, 2000); // Change every 2 seconds
+
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, [isAutoPlaying]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -191,11 +226,27 @@ export default function PortfolioList() {
                 hoveredIndex === index ? "#CCFF00" : "transparent",
             }}
             onMouseEnter={() => {
-              setHoveredIndex(index);
-              scrambleText(index);
+              if (!isAutoPlaying) {
+                setHoveredIndex(index);
+                scrambleText(index);
+              }
             }}
-            onMouseLeave={() => handleMouseLeave(index)}
-            onMouseMove={(e) => handleMouseMove(e, index)}
+            onMouseLeave={() => {
+              if (!isAutoPlaying) {
+                handleMouseLeave(index);
+              }
+            }}
+            onMouseMove={(e) => {
+              if (!isAutoPlaying) {
+                handleMouseMove(e, index);
+              }
+            }}
+            onClick={() => {
+              // Pause auto-play on click
+              if (isAutoPlaying) {
+                setIsAutoPlaying(false);
+              }
+            }}
             suppressHydrationWarning
           >
             {/* Cursor-following preview circle */}

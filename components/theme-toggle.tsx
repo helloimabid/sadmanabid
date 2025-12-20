@@ -55,16 +55,20 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
-  const isDarkBg = theme === "black" || theme === "red" || theme === "blue" || theme === "purple" || theme === "pink" || theme === "orange";
+  const isDarkBg =
+    theme === "black" ||
+    theme === "red" ||
+    theme === "blue" ||
+    theme === "purple" ||
+    theme === "pink" ||
+    theme === "orange";
 
   return (
     <div className="fixed bottom-4 right-4 z-[60]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border-2 hover:scale-110 transition-all duration-200 shadow-brutal ${
-          isDarkBg
-            ? "bg-black border-brutal-lime"
-            : "bg-white border-black"
+          isDarkBg ? "bg-black border-brutal-lime" : "bg-white border-black"
         }`}
         aria-label="Toggle theme"
       >
@@ -90,21 +94,31 @@ export default function ThemeToggle() {
                 }}
                 className={`w-full flex items-center gap-3 p-2 rounded transition-colors ${
                   theme === t.value
-                    ? "bg-brutal-lime text-black"
-                    : "hover:bg-white/10 text-white"
+                    ? "bg-brutal-lime"
+                    : "hover:bg-white/10"
                 }`}
               >
-                <div className="flex gap-1">
+                <div className="flex gap-1 flex-shrink-0">
                   <div
-                    className="w-4 h-4 rounded-sm border border-white/30"
+                    className={`w-4 h-4 rounded-sm border ${
+                      theme === t.value ? "border-black" : "border-brutal-lime"
+                    }`}
                     style={{ backgroundColor: t.colors.bg }}
                   />
                   <div
-                    className="w-4 h-4 rounded-sm border border-white/30"
+                    className={`w-4 h-4 rounded-sm border ${
+                      theme === t.value ? "border-black" : "border-brutal-lime"
+                    }`}
                     style={{ backgroundColor: t.colors.accent }}
                   />
                 </div>
-                <span className="font-sans text-xs">{t.label}</span>
+                <span 
+                  className={`font-sans text-xs whitespace-nowrap ${
+                    theme === t.value ? "text-black font-bold" : "text-white"
+                  }`}
+                >
+                  {t.label}
+                </span>
               </button>
             ))}
           </div>
