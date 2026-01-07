@@ -12,6 +12,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    title: "CompStudy",
+    description: "Competitive study timer platform",
+    subtitle: "Sadman Abid",
+    year: "2025",
+    image: "https://compstudy.tech/logo.png",
+    demoUrl: "https://compstudy.tech",
+  },
+  {
     title: "OpenLearn",
     description: "AI-powered education platform",
     subtitle: "Sadman Abid",

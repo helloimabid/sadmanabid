@@ -46,6 +46,7 @@ interface Translations {
     send: string
     sending: string
     sent: string
+    sentError: string
     namePlaceholder: string
     emailPlaceholder: string
     messagePlaceholder: string
@@ -117,6 +118,7 @@ const translations: Record<Language, Translations> = {
       send: "Send Message",
       sending: "Sending...",
       sent: "Message Sent!",
+      sentError:"Mail invalid!",
       namePlaceholder: "Your name",
       emailPlaceholder: "your@email.com",
       messagePlaceholder: "Tell me about your project...",
@@ -182,6 +184,7 @@ const translations: Record<Language, Translations> = {
       send: "বার্তা পাঠান",
       sending: "পাঠানো হচ্ছে...",
       sent: "বার্তা পাঠানো হয়েছে!",
+      sentError:"ইমেইল ভুল!",
       namePlaceholder: "আপনার নাম",
       emailPlaceholder: "আপনার@ইমেইল.কম",
       messagePlaceholder: "আপনার প্রজেক্ট সম্পর্কে বলুন...",
